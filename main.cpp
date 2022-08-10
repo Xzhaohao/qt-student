@@ -1,6 +1,5 @@
-#include "views/main/MainWindow.h"
-
 #include <QApplication>
+#include "views/main/MainWindow.h"
 
 int main(int argc, char *argv[]) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -8,6 +7,5 @@ int main(int argc, char *argv[]) {
 #endif
     QApplication a(argc, argv);
     MainWindow w;
-    w.show();
     return QApplication::exec();
 }

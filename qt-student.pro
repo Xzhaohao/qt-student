@@ -8,12 +8,15 @@ RC_ICONS += logo.ico
 
 SOURCES += \
     main.cpp \
+    views/login/Login.cpp \
     views/main/MainWindow.cpp
 
 HEADERS += \
+    views/login/Login.h \
     views/main/MainWindow.h
 
 FORMS += \
+    views/login/Login.ui \
     views/main/MainWindow.ui
 
 # Default rules for deployment.

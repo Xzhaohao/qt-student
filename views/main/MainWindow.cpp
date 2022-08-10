@@ -4,10 +4,14 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
 
-    setWindowTitle("学生管理系统");
+    mLogin.show();
+
+    connect(&mLogin, &Login::sendLoginSuccess, this, [=]() {
+        mLogin.hide();
+        this->show();
+    });
 }
 
 MainWindow::~MainWindow() {
     delete ui;
 }
-
