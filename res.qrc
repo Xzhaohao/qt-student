@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/avatar.webp</file>
+    </qresource>
+</RCC>
