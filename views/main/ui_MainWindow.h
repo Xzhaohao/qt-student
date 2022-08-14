@@ -179,6 +179,12 @@ public:
         gridLayout_4->addWidget(deleteBtn, 0, 5, 1, 1);
 
         tableWidget = new QTableWidget(student);
+        if (tableWidget->columnCount() < 2)
+            tableWidget->setColumnCount(2);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
 
         gridLayout_4->addWidget(tableWidget, 1, 0, 1, 6);
@@ -191,7 +197,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -210,6 +216,10 @@ public:
         plusBtn->setText(QApplication::translate("MainWindow", "\345\242\236\345\212\240", nullptr));
         updateBtn->setText(QApplication::translate("MainWindow", "\344\277\256\346\224\271", nullptr));
         deleteBtn->setText(QApplication::translate("MainWindow", "\345\210\240\351\231\244", nullptr));
+        QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "\345\272\217\345\217\267", nullptr));
+        QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
+        ___qtablewidgetitem1->setText(QApplication::translate("MainWindow", "\345\247\223\345\220\215", nullptr));
     } // retranslateUi
 
 };

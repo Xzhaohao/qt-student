@@ -2,7 +2,9 @@
 #define MAIN_WINDOW_H
 
 #include <QMainWindow>
+#include "ui_MainWindow.h"
 #include "../login/Login.h"
+#include "../../utils/studentSql.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

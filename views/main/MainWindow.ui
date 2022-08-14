@@ -175,7 +175,7 @@ background-color: rgb(255, 255, 255);</string>
        <number>1</number>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="admin"/>
       <widget class="QWidget" name="student">
@@ -223,7 +223,18 @@ background-color: rgb(255, 255, 255);</string>
          </widget>
         </item>
         <item row="1" column="0" colspan="6">
-         <widget class="QTableWidget" name="tableWidget"/>
+         <widget class="QTableWidget" name="tableWidget">
+          <column>
+           <property name="text">
+            <string>序号</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>姓名</string>
+           </property>
+          </column>
+         </widget>
         </item>
        </layout>
       </widget>

@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -9,11 +9,13 @@ RC_ICONS += logo.ico
 SOURCES += \
     main.cpp \
     views/login/Login.cpp \
-    views/main/MainWindow.cpp
+    views/main/MainWindow.cpp \
+    utils/studentSql.cpp
 
 HEADERS += \
     views/login/Login.h \
-    views/main/MainWindow.h
+    views/main/MainWindow.h \
+    utils/studentSql.h
 
 FORMS += \
     views/login/Login.ui \
