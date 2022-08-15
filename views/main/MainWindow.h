@@ -22,6 +22,7 @@ private:
     Ui::MainWindow *ui;
 
     Login mLogin;
+    StudentSql *mPtrSql;
 };
 
 #endif // MAIN_WINDOW_H

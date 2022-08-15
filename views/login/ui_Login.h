@@ -84,14 +84,19 @@ public:
         accountLabel->setObjectName(QString::fromUtf8("accountLabel"));
         accountLabel->setMinimumSize(QSize(60, 0));
         accountLabel->setMaximumSize(QSize(60, 16777215));
+        accountLabel->setStyleSheet(QString::fromUtf8("color: rgb(52, 73, 94);"));
         accountLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         gridLayout->addWidget(accountLabel, 0, 1, 1, 1);
 
         accountInput = new QLineEdit(formWrap);
         accountInput->setObjectName(QString::fromUtf8("accountInput"));
-        accountInput->setMinimumSize(QSize(180, 0));
+        accountInput->setMinimumSize(QSize(180, 24));
         accountInput->setMaximumSize(QSize(150, 16777215));
+        accountInput->setStyleSheet(QString::fromUtf8("border: 2px solid #BDC3C7;\n"
+"border-radius: 6;\n"
+"min-height: 20;\n"
+"padding-left: 5;"));
         accountInput->setMaxLength(12);
 
         gridLayout->addWidget(accountInput, 0, 2, 1, 1);
@@ -104,14 +109,19 @@ public:
         passwordLabel->setObjectName(QString::fromUtf8("passwordLabel"));
         passwordLabel->setMinimumSize(QSize(60, 0));
         passwordLabel->setMaximumSize(QSize(60, 16777215));
+        passwordLabel->setStyleSheet(QString::fromUtf8("color: rgb(52, 73, 94);"));
         passwordLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         gridLayout->addWidget(passwordLabel, 1, 1, 1, 1);
 
         passwordInput = new QLineEdit(formWrap);
         passwordInput->setObjectName(QString::fromUtf8("passwordInput"));
-        passwordInput->setMinimumSize(QSize(180, 0));
+        passwordInput->setMinimumSize(QSize(180, 24));
         passwordInput->setMaximumSize(QSize(180, 16777215));
+        passwordInput->setStyleSheet(QString::fromUtf8("border: 2px solid #BDC3C7;\n"
+"border-radius: 6;\n"
+"min-height: 20;\n"
+"padding-left: 5;"));
         passwordInput->setMaxLength(16);
         passwordInput->setEchoMode(QLineEdit::Password);
         passwordInput->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);

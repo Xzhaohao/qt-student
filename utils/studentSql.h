@@ -29,6 +29,15 @@ class StudentSql : public QObject {
 Q_OBJECT
 
 public:
+    static StudentSql *ptrSql;
+
+    static StudentSql *getInstance() {
+        if (nullptr == ptrSql) {
+            ptrSql = new StudentSql;
+        }
+        return ptrSql;
+    }
+
     explicit StudentSql(QObject *parent = nullptr);
 
     void init();
@@ -40,7 +49,7 @@ public:
     QList<Student> queryStuByPage(quint32 page, quint32 size);
 
     // 添加学生
-    bool addStudent(const Student&);
+    bool addStudent(const Student &);
 
     // 删除学生
     bool deleteStudent(int id);
@@ -55,13 +64,13 @@ public:
     QList<User> queryAllUser();
 
     // 查询用户是否存在
-    bool isExit(const QString& username);
+    bool isExit(const QString &username);
 
     // 添加用户
-    bool addUser(const User& user);
+    bool addUser(const User &user);
 
     // 修改用户
-    bool updateUser(const User& user);
+    bool updateUser(const User &user);
 
     // 修改用户
     bool deleteUser(int id);

@@ -38,6 +38,18 @@
     </property>
     <item row="0" column="0" colspan="2">
      <widget class="QWidget" name="headerContainer" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: #00A4FF;
 color: #FFFFFF;</string>
@@ -92,12 +104,21 @@ color: #FFFFFF;</string>
           <property name="horizontalSpacing">
            <number>6</number>
           </property>
+          <property name="verticalSpacing">
+           <number>0</number>
+          </property>
           <item row="0" column="0">
            <widget class="QLabel" name="avatar">
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
-              <width>40</width>
-              <height>40</height>
+              <width>45</width>
+              <height>45</height>
              </size>
             </property>
             <property name="styleSheet">
@@ -157,7 +178,8 @@ height: 20px;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">padding-top: 10px;
-background-color: rgb(255, 255, 255);</string>
+background-color: #3a4e61;
+color: #FFFFFF;</string>
       </property>
       <attribute name="headerVisible">
        <bool>false</bool>
@@ -180,6 +202,52 @@ background-color: rgb(255, 255, 255);</string>
       <widget class="QWidget" name="admin"/>
       <widget class="QWidget" name="student">
        <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="5">
+         <widget class="QPushButton" name="deleteBtn">
+          <property name="styleSheet">
+           <string notr="true">background-color: #FF9999;
+border-color: #FF9999;
+border-radius: 5px;
+width: 60px;
+height: 20px;
+color: #FFFFFF;</string>
+          </property>
+          <property name="text">
+           <string>删除</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QPushButton" name="updateBtn">
+          <property name="styleSheet">
+           <string notr="true">background-color: #FFCC00;
+border-color: #FFCC00;
+border-radius: 5px;
+width: 60px;
+height: 20px;
+color: #FFFFFF;</string>
+          </property>
+          <property name="text">
+           <string>修改</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="searchBtn">
+          <property name="styleSheet">
+           <string notr="true">background-color: #00A4FF;
+border-color: #00A4FF;
+border-radius: 5px;
+width: 60px;
+height: 20px;
+color: #FFFFFF;
+margin-right: 20;</string>
+          </property>
+          <property name="text">
+           <string>搜索</string>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="0">
          <widget class="QCheckBox" name="checkBox">
           <property name="text">
@@ -187,46 +255,14 @@ background-color: rgb(255, 255, 255);</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="searchInput">
-          <property name="placeholderText">
-           <string>搜索</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="searchBtn">
-          <property name="text">
-           <string>搜索</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="3">
-         <widget class="QPushButton" name="plusBtn">
-          <property name="text">
-           <string>增加</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="4">
-         <widget class="QPushButton" name="updateBtn">
-          <property name="text">
-           <string>修改</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="5">
-         <widget class="QPushButton" name="deleteBtn">
-          <property name="text">
-           <string>删除</string>
-          </property>
-         </widget>
-        </item>
         <item row="1" column="0" colspan="6">
          <widget class="QTableWidget" name="tableWidget">
+          <property name="styleSheet">
+           <string notr="true">color: #909399;</string>
+          </property>
           <column>
            <property name="text">
-            <string>序号</string>
+            <string>ID</string>
            </property>
           </column>
           <column>
@@ -234,6 +270,71 @@ background-color: rgb(255, 255, 255);</string>
             <string>姓名</string>
            </property>
           </column>
+          <column>
+           <property name="text">
+            <string>年龄</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>年级</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>班级</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>学号</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>手机号</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>微信</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="plusBtn">
+          <property name="styleSheet">
+           <string notr="true">background-color: #31C27C;
+border-color: #31C27C;
+border-radius: 5px;
+width: 60px;
+height: 20px;
+color: #FFFFFF;</string>
+          </property>
+          <property name="text">
+           <string>增加</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="searchInput">
+          <property name="styleSheet">
+           <string notr="true">border: 1px solid #dcdfe6;
+border-radius: 3;
+min-height: 20;
+padding-left: 6;</string>
+          </property>
+          <property name="placeholderText">
+           <string>搜索</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="count">
+          <property name="text">
+           <string>数量：</string>
+          </property>
          </widget>
         </item>
        </layout>

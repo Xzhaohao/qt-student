@@ -1,5 +1,7 @@
 #include "studentSql.h"
 
+StudentSql *StudentSql::ptrSql = nullptr;
+
 StudentSql::StudentSql(QObject *parent) : QObject(parent) {
     init();
 }
@@ -32,8 +34,8 @@ quint32 StudentSql::getStudentCount() {
 QList<Student> StudentSql::queryStuByPage(quint32 page, quint32 size) {
     QList<Student> list;
     QSqlQuery query(mDb);
-    QString sql = QString("select * from student order by id desc limit %1 offset %2;")
-            .arg(page).arg(page * size);
+    QString sql = QString("select * from student order by id asc limit %1 offset %2;")
+            .arg(size).arg(page * size);
     query.exec(sql);
 
     Student item;
