@@ -7,17 +7,20 @@ CONFIG += c++14
 RC_ICONS += logo.ico
 
 SOURCES += \
+    components/add-student/addStudent.cpp \
     main.cpp \
     views/login/Login.cpp \
     views/main/MainWindow.cpp \
     utils/studentSql.cpp
 
 HEADERS += \
+    components/add-student/addStudent.h \
     views/login/Login.h \
     views/main/MainWindow.h \
     utils/studentSql.h
 
 FORMS += \
+    components/add-student/addStudent.ui \
     views/login/Login.ui \
     views/main/MainWindow.ui
 

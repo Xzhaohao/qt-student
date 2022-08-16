@@ -18,7 +18,9 @@ add_executable(
         views/login/Login.cpp
         views/login/Login.h
         utils/studentSql.cpp
-        utils/studentSql.h)
+        utils/studentSql.h
+        components/add-student/addStudent.cpp
+        components/add-student/addStudent.h)
 
 if (NOT CMAKE_PREFIX_PATH)
     message(WARNING "CMAKE_PREFIX_PATH is not defined, you may need to set it "
